@@ -1,0 +1,19 @@
+.new{
+    height: 29px;
+    width: 80px;
+    @include center;
+    background-color: $color-tertiary;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-news;
+}
+
+.bubble{
+    height: 25px;
+    width: 25px;
+    background-color: $color-primary;
+    border:0px;
+    border-radius: 15px;
+    @include center;
+    color: white;
+}

@@ -1,0 +1,24 @@
+// colors list
+$color-primary:     #9356DC;
+$color-secondary:   #FF79DA;
+$color-tertiary:    #99E2D0;
+$color-news:        #008766;
+$color-back:        #F6F6F6;
+$color-grey:        #EAEAEA;
+$color-hover:       #F5EDFF;
+$color-footer:      #353535;
+
+
+// fonts list
+$font-base:     'Roboto', sans-serif;
+$font-title:    'Shrikhand', cursive;
+
+// breakpoint
+$breakpoints: (
+    'small':    767px,
+    'medium':   992px,
+    'large':    1200px,
+);
+
+// padding & margin
+$padding-edge: 20px;

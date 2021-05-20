@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+// Utils :
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+
+// Placeholders.
+
+// Feuilles de style de tiers (vendors).
+@import 'vendors/fontawesome/scss/fontawesome.scss';
+@import 'vendors/fontawesome/scss/solid.scss';
+@import 'vendors/fontawesome/scss/brands.scss';
+
+// Base.
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/heading';
+@import 'base/texte';
+
+// Composants.
+@import 'components/buttons';
+@import 'components/things';
+
+// Layout.
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages.
+@import 'pages/home';
+@import 'pages/menu';
