@@ -6089,6 +6089,23 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/public/font-awesome/webfonts/fa-regular-400.eot");
+  src: url("/assets/public/font-awesome/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/assets/public/font-awesome/webfonts/fa-regular-400.woff2") format("woff2"), url("/assets/public/font-awesome/webfonts/fa-regular-400.woff") format("woff"), url("/assets/public/font-awesome/webfonts/fa-regular-400.ttf") format("truetype"), url("/assets/public/font-awesome/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: 400;
@@ -6147,7 +6164,8 @@ td, th {
 }
 
 h1 {
-  font-size: 29px;
+  font-size: 28px;
+  font-family: "Shrikhand", cursive;
 }
 
 h2 {
@@ -6156,9 +6174,18 @@ h2 {
   margin-bottom: 21px;
 }
 
+.h2Menu {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #99E2D0;
+  margin-top: 32px;
+}
+
 h3 {
   font-size: 18px;
   font-weight: bold;
+  width: 100%;
 }
 
 * {
@@ -6179,7 +6206,7 @@ a {
   border-radius: 25px;
 }
 .btn:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 .operation__card {
@@ -6193,12 +6220,17 @@ a {
   border: 0px;
   border-radius: 18px;
   font-size: 16px;
+  -webkit-box-shadow: 0px 10px 10px 0px #EAEAEA;
+  box-shadow: 0px 10px 10px 0px #EAEAEA;
 }
 .operation__card p:first-child {
   margin-left: -12.5px;
 }
 .operation__card i {
   padding: 0 20px;
+}
+.operation__card--focus {
+  background-color: #F5EDFF;
 }
 
 .new {
@@ -6223,6 +6255,10 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.favorite {
+  color: #9356DC;
 }
 
 .header {
@@ -6250,9 +6286,6 @@ a {
   font-size: 18px;
   margin-bottom: 25px;
 }
-.footer__list {
-  height: 100%;
-}
 .footer__list i {
   width: 23px;
 }
@@ -6264,6 +6297,8 @@ a {
   height: 50px;
   background-color: #EAEAEA;
   font-size: 16px;
+  -webkit-box-shadow: inset 0px 20px 10px -10px #909090;
+  box-shadow: inset 0px 20px 10px -10px #909090;
 }
 .location i {
   padding-right: 18px;
@@ -6307,14 +6342,30 @@ a {
 }
 .restaurant__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
   row-gap: 19px;
+  column-gap: 19px;
 }
 .restaurant__card {
   height: 251px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.5);
+  box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.5);
+}
+@media (min-width: 767px) {
+  .restaurant__card {
+    width: 45%;
+  }
+}
+@media (min-width: 1200px) {
+  .restaurant__card {
+    width: 20%;
+    max-width: 350px;
+  }
 }
 .restaurant__cardImg {
   height: 174px;
@@ -6343,6 +6394,39 @@ a {
 .restaurant__cardDescription i {
   color: black;
   font-size: 20px;
+}
+
+.imgRestaurant {
+  height: 257px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -40px;
+}
+
+.menu {
+  background-color: #EAEAEA;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 38px 20px;
+}
+.menuList {
+  display: flex;
+  flex-direction: column;
+}
+.menuList__dish {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  margin-top: 14px;
+  background-color: white;
+  border-radius: 15px;
+}
+.menuList__dishInfo {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

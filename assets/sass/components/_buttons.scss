@@ -6,7 +6,7 @@
     border-radius: 25px;
 
     &:hover{
-        background: linear-gradient($color-primary, $color-secondary);
+        background: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
     }
 }   
 
@@ -21,6 +21,7 @@
     border: 0px;
     border-radius: 18px;
     font-size: 16px;
+    @include shadow;
 
     p:first-child{
         margin-left: -12.5px;
@@ -29,6 +30,11 @@
     i{
         padding: 0 20px;
     }
+
+    &--focus{
+        background-color: $color-hover;
+    }
+
 }
 
 .meal{

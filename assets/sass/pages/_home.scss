@@ -3,6 +3,7 @@
     height: 50px;
     background-color: $color-grey;
     font-size: 16px;
+    @include shadow-inset;
 
     i{
         padding-right: 18px;
@@ -47,14 +48,25 @@
     background-color: $color-grey;
     &__list{
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
         row-gap: 19px;
+        column-gap: 19px;
     }
     &__card{
         height: 251px;
         width: 100%;
         display: flex;
         flex-direction: column;
+        border-radius: 15px;
+        @include shadow-darken;
+        @media (min-width: map-get($map: $breakpoints, $key: small)) {
+            width: 45%;
+        }
+        @media (min-width: map-get($map: $breakpoints, $key: large)) {
+            width: 20%;
+            max-width: 350px;
+        }
         &Img{
             height: 174px;
             width: 100%;
