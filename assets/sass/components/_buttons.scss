@@ -4,6 +4,8 @@
     width: 218px;
     @include center;
     border-radius: 25px;
+    color:white;
+    @include shadow-darken;
 
     &:hover{
         background: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
@@ -37,6 +39,8 @@
 
 }
 
-.meal{
-
+.favorite{
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
