@@ -12,35 +12,16 @@
     }
 }   
 
-.operation__card{
-    height: 73px;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    align-items: baseline;
-    background-color: $color-back;
-    border: 0px;
-    border-radius: 18px;
-    font-size: 16px;
-    @include shadow;
 
-    p:first-child{
-        margin-left: -12.5px;
-    }
-
-    i{
-        padding: 0 20px;
-    }
-
-    &--focus{
-        background-color: $color-hover;
-    }
-
-}
 
 .favorite{
     background: -webkit-linear-gradient($color-primary, $color-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+.btn__order{
+    @include center;
+    margin-top: 50px;
 }

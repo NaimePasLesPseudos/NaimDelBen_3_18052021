@@ -1,0 +1,20 @@
+.reservation{
+    height: 286px;
+    text-align: center;
+    background-color: $color-back;
+    @include center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 41px $padding-edge;
+
+    &Title{
+        font-family: $font-base;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+}

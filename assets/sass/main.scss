@@ -22,11 +22,16 @@
 // Composants.
 @import 'components/buttons';
 @import 'components/things';
+@import 'components/cards';
 
 // Layout.
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/location';
+@import 'layout/operation';
+@import 'layout/reservation';
+@import 'layout/main';
+@import 'layout/hero';
 
 // Pages.
-@import 'pages/home';
 @import 'pages/menu';

@@ -1,0 +1,11 @@
+.location {
+    @include center;
+    height: 50px;
+    background-color: $color-grey;
+    font-size: 16px;
+    @include shadow-inset;
+
+    i{
+        padding-right: 18px;
+    }
+}

@@ -1,13 +1,16 @@
 .header{
     height: 64px;
     @include center;
+    padding-top: 10px;
 
-    i{
-        // display: none;
-        justify-self: flex-start;
+    a{
+        position: absolute;
+        left: 20px;
+        top: 26px;
     }
 
     img{
         height: 30px;
+        text-align: center;
     }
 }

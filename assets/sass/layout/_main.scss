@@ -1,0 +1,12 @@
+
+.mainly{
+    padding: 54px $padding-edge;
+    background-color: $color-grey;
+    &__list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        row-gap: 19px;
+        column-gap: 19px;
+    }
+}

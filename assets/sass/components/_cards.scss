@@ -1,0 +1,72 @@
+.cardPrimary{
+    height: 251px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    @include shadow-darken;
+    @media (min-width: map-get($map: $breakpoints, $key: small)) {
+        width: 45%;
+    }
+    @media (min-width: map-get($map: $breakpoints, $key: large)) {
+        width: 20%;
+        max-width: 350px;
+    }
+    &__img{
+        height: 174px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    &__description {
+        height: 77px;
+        background-color: white;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 0 13px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        &Title{
+            color: black;
+        }
+        i{
+            color: black;
+            font-size: 20px;
+        }
+    }
+}
+
+.operation__card{
+    height: 73px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: baseline;
+    background-color: $color-back;
+    border: 0px;
+    border-radius: 18px;
+    font-size: 16px;
+    @include shadow;
+
+    p:first-child{
+        margin-left: -12.5px;
+    }
+
+    i{
+        padding: 0 20px;
+    }
+
+    &--focus{
+        background-color: $color-hover;
+    }
+
+}
+
