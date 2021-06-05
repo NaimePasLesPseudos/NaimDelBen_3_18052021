@@ -1,0 +1,21 @@
+.favorite{
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover{
+        display: none;
+    }
+
+    &:hover + .favorite--like{
+        display: inline-block;
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    &--like{
+        display: none;
+    }
+
+}

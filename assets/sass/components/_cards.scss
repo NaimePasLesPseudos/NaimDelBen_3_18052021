@@ -70,3 +70,61 @@
 
 }
 
+.cardItem{
+    height: 68px;
+    width: auto;
+    // max-width: 349px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    background-color: white;
+    border-radius: 15px;
+    @include shadow-darken;
+    
+    // @media (min-width: map-get($map: $breakpoints, $key: medium)) {
+        //     flex-flow: row wrap;
+        //     justify-content: space-between;
+        // }
+        
+        &__content{
+            min-width: 0;
+            padding: 9px 21px 7px 10px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            flex: auto;
+
+        &Text{
+            display: flex;
+            justify-content: space-between;
+            
+            &Truncated{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        
+            &Fixed{
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &:hover > .cardItem__check{
+        height: 68px;
+        width: 59px;
+        background-color: $color-tertiary ;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+        @include center;
+        flex: none;
+        color: white;
+        font-size: 24px;
+        @include shadow-darken;
+    }
+    
+    &__check{
+        display: none;
+    }
+}
