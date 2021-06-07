@@ -1,18 +1,30 @@
 .footer{
-    height: 197px;
     background-color: $color-footer;
     color: white;
     padding: 30px $padding-edge;
     font-family: $font-base;
+    
+    &--white{
+        color: white;
+        font-size: 16px ;
+    }
+    
+    &--focus{
+        font-weight: bold;
+    }
+
+    li{
+        padding-bottom: 8px;
+    }
 
     &Title{
         font-family: $font-title;
         font-size: 18px;
         margin-bottom: 25px;
     }
-
-    &__list{
     
+    &List{
+
         i{
             width: 23px;
         }
