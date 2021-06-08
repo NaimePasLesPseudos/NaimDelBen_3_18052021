@@ -4,14 +4,22 @@
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    
     @include shadow-darken;
-    @media (min-width: map-get($map: $breakpoints, $key: small)) {
-        width: 45%;
+
+    @media (min-width: map-get($map: $breakpoints, $key: small)){
+        width: calc(100% / 2 - 19px);
     }
-    @media (min-width: map-get($map: $breakpoints, $key: large)) {
-        width: 20%;
-        max-width: 350px;
+
+    @media (min-width: map-get($map: $breakpoints, $key: large)){
+        width: calc(100% / 4 - 19px);
     }
+
+    
+    .cardPrimary__descriptionTitle:hover{
+        color: $color-secondary;
+    }
+    
     &__img{
         height: 174px;
         width: 100%;
@@ -20,9 +28,16 @@
         border-top-right-radius: 15px;
         margin: 0;
         padding: 0;
+   
+        &Link {
+            height: 174px;
+            &:hover + .cardPrimary__description .cardPrimary__descriptionTitle {
+                        color: $color-secondary;
+            }
+        }
     }
     
-    &__description {
+    &__description{
         height: 77px;
         background-color: white;
         display: flex;
@@ -54,14 +69,35 @@
     border: 0px;
     border-radius: 18px;
     font-size: 16px;
+
     @include shadow;
+
+    @media (min-width: map-get($map: $breakpoints, $key: small)){
+        height: 120px;
+        padding-bottom: 10px;
+        width: calc(100% / 3 - 19px);
+        @include center;
+        justify-content: space-between;
+        flex-flow: column;
+    }
 
     p:first-child{
         margin-left: -12.5px;
+
+        @media (min-width: map-get($map: $breakpoints, $key: small)){
+            margin-left: 0px;
+            margin-top: -12.5px;
+        }
     }
 
     i{
-        padding: 0 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        @include padding-left-and-right-rwd;
+
+        @media (min-width: map-get($map: $breakpoints, $key: small)){
+            font-size: 50px;
+        }
     }
 
     &--focus{
@@ -73,32 +109,27 @@
 .cardItem{
     height: 68px;
     width: auto;
-    // max-width: 349px;
     display: flex;
     justify-content: space-between;
     margin-top: 14px;
     background-color: white;
     border-radius: 15px;
+
     @include shadow-darken;
-    
-    // @media (min-width: map-get($map: $breakpoints, $key: medium)) {
-        //     flex-flow: row wrap;
-        //     justify-content: space-between;
-        // }
         
-        &__content{
-            min-width: 0;
-            padding: 9px 21px 7px 10px;
-            display: flex;
-            flex-flow: column;
-            justify-content: space-between;
-            flex: auto;
+    &__content{
+        min-width: 0;
+        padding: 9px 21px 7px 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        flex: auto;
 
         &Text{
             display: flex;
             justify-content: space-between;
             
-            &Truncated{
+            &Ellipsis{
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -117,10 +148,11 @@
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         display: flex;
-        @include center;
         flex: none;
         color: white;
         font-size: 24px;
+
+        @include center;
         @include shadow-darken;
     }
     

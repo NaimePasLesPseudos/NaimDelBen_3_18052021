@@ -1,10 +1,12 @@
 .mainly{
-    padding: 54px $padding-edge;
+    padding-top: 54px;
+    padding-bottom: 64px;
+    @include padding-left-and-right-rwd;
     background-color: $color-grey;
     &__list{
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-between;
         row-gap: 19px;
         column-gap: 19px;
     }

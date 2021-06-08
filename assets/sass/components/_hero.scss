@@ -2,7 +2,9 @@
     background-color: $color-back;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding: 38px $padding-edge;
+    padding-top: 38px;
+    padding-bottom: 83px;
+    @include padding-left-and-right-rwd;
     z-index: 1;
     position: relative;
     color: black ;
@@ -37,5 +39,4 @@
             margin-top: 3px;
         }
     }
-
 }

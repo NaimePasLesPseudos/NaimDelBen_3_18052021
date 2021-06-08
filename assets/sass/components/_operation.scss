@@ -1,0 +1,20 @@
+.operation{
+    // height: 440px;
+    height: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include padding-left-and-right-rwd;
+
+    &__list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+        padding: 7px 0px 10px;
+
+        @media (min-width: map-get($map: $breakpoints, $key: small)){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

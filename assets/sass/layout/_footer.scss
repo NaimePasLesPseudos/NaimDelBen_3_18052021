@@ -1,7 +1,9 @@
 .footer{
     background-color: $color-footer;
     color: white;
-    padding: 30px $padding-edge;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include padding-left-and-right-rwd;
     font-family: $font-base;
     
     &--white{
@@ -24,10 +26,8 @@
     }
     
     &List{
-
         i{
             width: 23px;
         }
     }
-
 }

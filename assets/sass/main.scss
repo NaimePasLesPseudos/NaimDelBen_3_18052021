@@ -5,8 +5,6 @@
 @import 'utils/functions';
 @import 'utils/mixins';
 
-// Placeholders.
-
 // Feuilles de style de tiers (vendors).
 @import 'vendors/fontawesome/scss/fontawesome.scss';
 @import 'vendors/fontawesome/scss/solid.scss';
@@ -18,21 +16,21 @@
 @import 'base/typography';
 @import 'base/heading';
 @import 'base/texte';
+@import 'base/animation';
 
 // Composants.
 @import 'components/buttons';
 @import 'components/things';
 @import 'components/cards';
 @import 'components/favorite';
+@import 'components/img';
+@import 'components/loader';
+@import 'components/location';
+@import 'components/operation';
+@import 'components/hero';
 
 // Layout.
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/location';
-@import 'layout/operation';
 @import 'layout/reservation';
 @import 'layout/main';
-@import 'layout/hero';
-
-// Pages.
-@import 'pages/menu';
