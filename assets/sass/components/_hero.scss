@@ -9,10 +9,17 @@
     position: relative;
     color: black ;
 
+    @media (min-width: map-get($map: $breakpoints, $key: medium)){
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
     &Title{
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+
     }
 
     i{

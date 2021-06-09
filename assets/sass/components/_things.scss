@@ -6,6 +6,10 @@
     font-size: 14px;
     font-weight: bold;
     color: $color-news;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    z-index: 1;
 }
 
 .bubble{

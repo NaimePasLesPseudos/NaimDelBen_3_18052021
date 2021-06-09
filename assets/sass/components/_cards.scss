@@ -30,6 +30,7 @@
         padding: 0;
    
         &Link {
+            position: relative;
             height: 174px;
             &:hover + .cardPrimary__description .cardPrimary__descriptionTitle {
                         color: $color-secondary;

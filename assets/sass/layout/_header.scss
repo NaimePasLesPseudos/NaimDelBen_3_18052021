@@ -7,6 +7,12 @@
         position: absolute;
         left: 20px;
         top: 26px;
+        font-size: 18px;
+
+        &:active{
+            color: black;
+        }
+
     }
 
     img{

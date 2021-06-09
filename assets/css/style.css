@@ -6222,6 +6222,10 @@ a {
   font-size: 14px;
   font-weight: bold;
   color: #008766;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  z-index: 1;
 }
 
 .bubble {
@@ -6268,6 +6272,7 @@ a {
   padding: 0;
 }
 .cardPrimary__imgLink {
+  position: relative;
   height: 174px;
 }
 .cardPrimary__imgLink:hover + .cardPrimary__description .cardPrimary__descriptionTitle {
@@ -6417,7 +6422,7 @@ a {
 }
 
 .favorite {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -6509,6 +6514,12 @@ a {
     padding-left: 3.5%;
   }
 }
+@media (min-width: 992px) {
+  .hero {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
 .heroTitle {
   display: flex;
   justify-content: space-between;
@@ -6537,6 +6548,27 @@ a {
   margin-top: 3px;
 }
 
+.reservation {
+  height: 286px;
+  text-align: center;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 41px 20px;
+}
+.reservationTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.reservation p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
 .header {
   height: 64px;
   display: flex;
@@ -6548,6 +6580,10 @@ a {
   position: absolute;
   left: 20px;
   top: 26px;
+  font-size: 18px;
+}
+.header a:active {
+  color: black;
 }
 .header img {
   height: 30px;
@@ -6592,27 +6628,6 @@ a {
 }
 .footerList i {
   width: 23px;
-}
-
-.reservation {
-  height: 286px;
-  text-align: center;
-  background-color: #F6F6F6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 41px 20px;
-}
-.reservationTitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-}
-.reservation p {
-  font-size: 18px;
-  font-weight: lighter;
 }
 
 .mainly {
