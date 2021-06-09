@@ -1,0 +1,67 @@
+@keyframes loading-jump {
+    0%{
+        text-shadow: 0 0px $color-primary, 0 0px $color-secondary;
+    }
+    33% {
+        text-shadow: 0 -3vh $color-secondary, 0 -6vh $color-primary;
+    }
+    50% {
+        transform: translate(0, 0);
+        text-shadow: 0 0px $color-tertiary, 0 0px $color-tertiary;
+    }
+    66% {
+        text-shadow: 0 3vh $color-secondary, 0 6vh $color-primary;
+    }
+  }
+
+@keyframes loading-effect{
+    0%{
+        z-index: 100;
+        top: 0;
+        left: 0;
+    }
+    100%{
+        z-index: -1;
+        top: -9000;
+        left: -9000;
+    }
+}
+
+@keyframes loading-background {
+    0%{
+        background: linear-gradient($color-primary, $color-secondary);
+    }
+    50%{
+        
+    }
+    100%{
+        background: linear-gradient($color-secondary, white);
+    }
+}
+
+.loader{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    @include center;
+
+    animation: 
+    2s ease-in 0s loading-effect, 
+    2s ease-in 0s loading-background;
+
+    span{
+        color: white;
+        font-family: $font-title;
+        font-size: 10vw;
+        transform: translate(0, 50%);
+        animation: loading-jump 2s ease-in-out infinite;
+        display: inline-block;
+
+
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: 50ms * $i;
+            }
+            }
+    }
+}

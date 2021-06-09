@@ -5,15 +5,15 @@
     @include center;
     border-radius: 25px;
     color:white;
-    @include shadow-darken;
+    @include shadow;
 
     &:hover{
         background: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+        @include shadow-darken;
     }
 }   
 
 .btn__order{
     @include center;
     margin-top: 50px;
-
 }
