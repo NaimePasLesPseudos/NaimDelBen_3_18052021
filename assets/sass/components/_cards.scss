@@ -117,6 +117,13 @@
     border-radius: 15px;
 
     @include shadow-darken;
+
+    animation: come-card 2s both;
+    @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }
+    }
         
     &__content{
         min-width: 0;
@@ -142,22 +149,66 @@
         }
     }
 
-    &:hover > .cardItem__check{
-        height: 68px;
-        width: 59px;
-        background-color: $color-tertiary ;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display: flex;
-        flex: none;
-        color: white;
-        font-size: 24px;
+    &:hover{
 
-        @include center;
-        @include shadow-darken;
+        .cardItem__check{
+            height: 68px;
+            // width: 59px;
+            background-color: $color-tertiary ;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            flex: none;
+            color: white;
+            font-size: 24px;
+            margin-right: 0;
+            opacity: 1;
+    
+            @include center;
+            @include shadow-darken;
+    
+            animation: come-check 1s both;
+           
+        }
+        .cardItem__check i{
+            color: white;
+            transform: rotate(360deg);
+            transition: all 1s;
+        }
     }
     
     &__check{
-        display: none;
+        color: white;
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes come-card {
+    0%{
+        transform: translate(0, 15px);
+        opacity: 0;
+        height: 70px;
+    }
+
+    5%{
+        opacity: 0.1;
+    }
+    
+    20%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes come-check {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 59px;
     }
 }
