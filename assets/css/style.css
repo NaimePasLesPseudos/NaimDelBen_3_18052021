@@ -6418,27 +6418,37 @@ a {
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  display: flex;
   flex: none;
   color: white;
   font-size: 24px;
   margin-right: 0;
-  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 10px 0px rgba(196, 196, 196, 0.5);
-  animation: come-check 1s both;
+  animation: come-check 0.5s both;
 }
 .cardItem:hover .cardItem__check i {
   color: white;
   transform: rotate(360deg);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .cardItem__check {
+  height: 68px;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  flex: none;
   color: white;
+  font-size: 24px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px 0px rgba(196, 196, 196, 0.5);
   width: 0;
   overflow: hidden;
+  animation: come-check-reverse 0.3s forwards;
 }
 
 @keyframes come-card {
@@ -6463,6 +6473,14 @@ a {
   }
   100% {
     width: 59px;
+  }
+}
+@keyframes come-check-reverse {
+  0% {
+    width: 59px;
+  }
+  100% {
+    width: 0px;
   }
 }
 .favoriteButton {

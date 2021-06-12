@@ -153,34 +153,43 @@
 
         .cardItem__check{
             height: 68px;
-            // width: 59px;
             background-color: $color-tertiary ;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
-            display: flex;
             flex: none;
             color: white;
             font-size: 24px;
             margin-right: 0;
-            opacity: 1;
-    
+            
             @include center;
             @include shadow-darken;
-    
-            animation: come-check 1s both;
-           
+            
+            animation: come-check 0.5s both;
+            
         }
         .cardItem__check i{
             color: white;
             transform: rotate(360deg);
-            transition: all 1s;
+            transition: all 0.5s;
         }
     }
     
     &__check{
+        height: 68px;
+        background-color: $color-tertiary ;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        flex: none;
         color: white;
+        font-size: 24px;
+        margin-right: 0;
+        
+        @include center;
+        @include shadow-darken;
+
         width: 0;
         overflow: hidden;
+        animation: come-check-reverse 0.3s forwards;
     }
 }
 
@@ -190,7 +199,7 @@
         opacity: 0;
         height: 70px;
     }
-
+    
     5%{
         opacity: 0.1;
     }
@@ -198,7 +207,7 @@
     20%{
         opacity: 0.5;
     }
-
+    
     100%{
         opacity: 1;
     }
@@ -210,5 +219,13 @@
     }
     100%{
         width: 59px;
+    }
+}
+@keyframes come-check-reverse {
+    0%{
+        width: 59px;
+    }
+    100%{
+        width: 0px;
     }
 }
