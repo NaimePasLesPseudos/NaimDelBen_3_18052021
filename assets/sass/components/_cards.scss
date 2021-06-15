@@ -14,7 +14,6 @@
     @media (min-width: map-get($map: $breakpoints, $key: large)){
         width: calc(100% / 4 - 19px);
     }
-
     
     .cardPrimary__descriptionTitle:hover{
         color: $color-secondary;
@@ -28,7 +27,7 @@
         border-top-right-radius: 15px;
         margin: 0;
         padding: 0;
-   
+        
         &Link{
             position: relative;
             height: 174px;
