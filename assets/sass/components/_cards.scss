@@ -27,7 +27,7 @@
         border-top-right-radius: 15px;
         margin: 0;
         padding: 0;
-        
+
         &Link{
             position: relative;
             height: 174px;
@@ -114,6 +114,7 @@
     margin-top: 14px;
     background-color: white;
     border-radius: 15px;
+    overflow: hidden;
 
     @include shadow-darken;
 
@@ -144,6 +145,7 @@
         
             &Fixed{
                 white-space: nowrap;
+                font-weight: bold;
             }
         }
     }
@@ -161,7 +163,6 @@
             margin-right: 0;
             
             @include center;
-            @include shadow-darken;
             
             animation: come-check 0.5s both;
             
@@ -196,7 +197,6 @@
     0%{
         transform: translate(0, 15px);
         opacity: 0;
-        height: 70px;
     }
     
     5%{
@@ -205,6 +205,11 @@
     
     20%{
         opacity: 0.5;
+        transform: translate(0, 10px);
+    }
+    
+    70%{
+        transform: translate(0, 0px);
     }
     
     100%{

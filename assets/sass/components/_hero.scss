@@ -9,7 +9,7 @@
     position: relative;
     color: black ;
 
-    @media (min-width: map-get($map: $breakpoints, $key: medium)){
+    @media (min-width: map-get($map: $breakpoints, $key: small)){
         padding-left: 25%;
         padding-right: 25%;
     }

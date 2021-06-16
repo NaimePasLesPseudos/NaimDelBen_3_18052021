@@ -1,43 +1,47 @@
 .favorite{
-
+    overflow: visible;
+    height: 25;
+    width: 25;
+    
     &Button{
         background: black;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
-        &--like {
+        
+        &--like{
             display: none;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
         }
     }
     
-    &:hover {
+    &:hover{
+        animation: pulse 1s linear;
+
         .favoriteButton{
-            display: none;
-        }
-        .favoriteButton--like{
+        display: none;
+    }
+
+    .favoriteButton--like{
             display: inline-block;
-            background: linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: pulse 1s linear;
         }
     }
 }
 
 @keyframes pulse {
-    0%{
-      transform: scale(1.5) rotate(10deg);
-    }
-    
-    30% {
-      transform: scale(0.7);
-    }
-    
-    66% {
-      transform:  scale(0.8) rotate(-10deg);
-    }
-    
-    100% {
-      transform: scale(1.0);
-    }
+  10%{
+    transform: scale(1.5) rotate(10deg);
   }
+
+  30% {
+    transform: scale(0.7);
+  }
+
+  66% {
+    transform:  scale(0.8) rotate(-10deg);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
