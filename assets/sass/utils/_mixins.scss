@@ -10,7 +10,7 @@
 }
 
 @mixin shadow-darken {
-    box-shadow:         0 5px 10px 0px rgb(196 196 196 / 50%);
+    box-shadow:         0px 10px 10px 0px darken($color-grey, 10);
 }
 
 @mixin shadow-inset {
